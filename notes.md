@@ -106,3 +106,27 @@ point.x = 1;
 point.y = 2;
 point.draw();
 ```
+
+- Constructors: method that is called when an instance is created
+
+```TypeScript
+class Point {
+  x: number;
+  y: number;
+
+  constructor(x?: number, y?: number) {
+    // ? means optional parameter
+    // by convention everything to the right of an optional parameter should also be optional
+    this.x = x;
+    this.y = y;
+  }
+
+  draw() {
+    console.log('X: ' + this.x + 'Y: ' + this.y);
+  }
+}
+
+
+let point = new Point(1, 2);
+point.draw();
+```
