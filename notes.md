@@ -130,3 +130,22 @@ class Point {
 let point = new Point(1, 2);
 point.draw();
 ```
+
+- Access Modifiers: key word applied to a member of a class to prevent outside access
+  - public: default
+  - private
+  - protected
+``` TypeScript 
+class Point {
+  constructor(private x?: number, private y?: number) {
+  }
+  
+  draw() {
+    console.log('X: ' + this.x + 'Y: ' + this.y);    
+  }
+}
+
+
+let point = new Point(1, 2);
+```
+
