@@ -1,10 +1,4 @@
-function doSomething() {
-  for (var i = 0; i < 5; i++) {
-    console.log(i)
-  }
+import { Point } from './point';
 
-  console.log('Finally: ' + i)
-}
-
-doSomething();
-// Leaky data: i is still available outside of the for block
+let point = new Point(1, 2);
+point.draw();

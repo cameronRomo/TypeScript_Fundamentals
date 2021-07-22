@@ -1,7 +1,15 @@
-function doSomething() {
-    for (var i = 0; i < 5; i++) {
-        console.log(i);
+var Point = /** @class */ (function () {
+    function Point() {
     }
-    console.log('Finally: ' + i);
-}
-doSomething();
+    Point.prototype.draw = function () {
+        console.log('X: ' + this.x + 'Y: ' + this.y);
+    };
+    Point.prototype.getDistance = function (another) {
+        // ...
+    };
+    return Point;
+}());
+var point = new Point();
+point.x = 1;
+point.y = 2;
+point.draw();
