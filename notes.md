@@ -21,7 +21,8 @@
 
 - Compiler will return error from typechecking, but still compile code into js in the example of var vs. let
 - Types:
-``` TypeScript
+
+```TypeScript
   - let a: number;
   - let b: boolean;
   - let c: string;
@@ -41,9 +42,67 @@
 ```
 
 - Type assertion:
+
   ````TypeScript
   let message;
   message = 'abc';
   let endsWithC = (<string>message).endsWith('c');
   let alternativeWay = (message as string).endsWith('c')```
   ````
+
+- Interfaces:
+  - Interfaces help to simplify declarations and are reusable (Always use Pascal case)
+  ```TypeScript
+  interface Point {
+  x: number,
+  y: number
+  }
+  ```
+
+let drawPoint = (point: Point) => {
+// ...
+}
+
+````TypeScript
+
+- Classes
+  - Cohesion: things that are related should be part of one unit
+
+  ```TypeScript
+  class Point {
+    x: number;
+    y: number;
+
+    draw() {
+      // ...
+    }
+
+    getDistance(another: Point) {
+      // ...
+    }
+  }
+````
+
+- Objects/Instances of classes: very similar to JS
+
+```TypeScript
+class Point {
+  x: number;
+  y: number;
+
+  draw() {
+    console.log('X: ' + this.x + 'Y: ' + this.y);
+
+  }
+
+  getDistance(another: Point) {
+    // ...
+  }
+}
+
+
+let point = new Point();
+point.x = 1;
+point.y = 2;
+point.draw();
+```
